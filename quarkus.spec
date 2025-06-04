@@ -7,8 +7,8 @@ License:        Apache-2.0
 Source0:        https://github.com/quarkusio/quarkus/releases/download/%{version}/quarkus-cli-%{version}.tar.gz
 BuildArch:      noarch
 
-Requires:       (java-11-openjdk | java-17-openjdk | java-21-openjdk)
-Suggests:       (maven)
+Requires:       (java-11-openjdk or java-17-openjdk or java-21-openjdk)
+Suggests:       maven
 
 %description
 Quarkus is a Cloud Native, (Linux) Container First framework for writing Java applications.
