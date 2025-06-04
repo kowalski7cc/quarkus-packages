@@ -24,3 +24,13 @@ jobs:
         run: |
           spectool -g -R quarkus.spec
           rpmbuild -bb --clean quarkus.spec
+
+      - name: Upload Package
+        run: |
+          curl --user $GITEA_USERNAME:$GITEA_TOKEN \
+               --upload-file /root/rpmbuild/RPMS/x86_64/quarkus-*.rpm \
+               ${{ vars.INSTANCE }}/api/packages/${{ github.repository_owner }}/rpm/upload
+        env:
+          GITEA_USERNAME: ${{ github.repository_owner }}
+          GITEA_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
+        
