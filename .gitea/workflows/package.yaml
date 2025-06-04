@@ -11,15 +11,16 @@ jobs:
 
   package:
     name: Package
-    runs-on: almalinux-9
+    runs-on: ubi-9
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Install make and rpmbuild
         run: |
-          sudo dnf install -y make rpm-build
+          dnf install -y make rpmdevtools 
 
-      - name: Build RPM package
+      - name: Build Package
         run: |
-          make rpm
+          spectool -g -R quarkus.spec
+          rpmbuild -bb --clean quarkus.spec
