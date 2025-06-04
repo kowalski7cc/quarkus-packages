@@ -1,5 +1,5 @@
 Name:           quarkus
-Version:        3.8.6
+Version:        3.15.5
 Release:        1
 Summary:        Quarkus: Supersonic Subatomic Java.
 
