@@ -1,6 +1,6 @@
 Name:           quarkus
 Version:        3.5.3
-Release:        %autorelease
+Release:        1
 Summary:        Quarkus: Supersonic Subatomic Java.
 
 License:        Apache-2.0
@@ -14,8 +14,8 @@ Quarkus is a Cloud Native, (Linux) Container First framework for writing Java ap
 %setup -q -c -n %{name}-%{version}
 
 %install
-%{__install} -D -m 0644 quarkus-cli-3.5.3/lib/quarkus-cli-%{version}-runner.jar %{buildroot}%{_datadir}/quarkus/lib/quarkus-cli-%{version}-runner.jar
-%{__install} -D -m 0755 quarkus-cli-3.5.3/bin/quarkus %{buildroot}%{_datadir}/quarkus/bin/quarkus
+%{__install} -D -m 0644 quarkus-cli-%{version}/lib/quarkus-cli-%{version}-runner.jar %{buildroot}%{_datadir}/quarkus/lib/quarkus-cli-%{version}-runner.jar
+%{__install} -D -m 0755 quarkus-cli-%{version}/bin/quarkus %{buildroot}%{_datadir}/quarkus/bin/quarkus
 
 %post
 # symlink /usr/bin/quarkus to /usr/share/quarkus/lib/quarkus
