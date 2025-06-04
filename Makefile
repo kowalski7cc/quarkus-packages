@@ -1,4 +1,4 @@
-VERSION = 3.15.5
+VERSION = 3.20.1
 BASE = quarkus
 NAME =  $(BASE)-$(VERSION)
 BUILDDIR=$(shell rpm --eval '%_topdir')
