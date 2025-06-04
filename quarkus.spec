@@ -1,5 +1,5 @@
 Name:           quarkus
-Version:        3.5.3
+Version:        3.8.6
 Release:        1
 Summary:        Quarkus: Supersonic Subatomic Java.
 
@@ -7,7 +7,7 @@ License:        Apache-2.0
 Source0:        https://github.com/quarkusio/quarkus/releases/download/%{version}/quarkus-cli-%{version}.tar.gz
 BuildArch:      noarch
 
-Requires:       (java-11-openjdk-headless or java-11-openjdk or java-17-openjdk-headless or java-17-openjdk or java-21-openjdk-headless or java-21-openjdk)
+Requires:       (java-17-openjdk-headless or java-17-openjdk or java-21-openjdk-headless or java-21-openjdk)
 Suggests:       maven
 
 %description
