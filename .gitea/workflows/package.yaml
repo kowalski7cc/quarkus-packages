@@ -28,8 +28,8 @@ jobs:
       - name: Upload Package
         run: |
           curl --user $GITEA_USERNAME:$GITEA_TOKEN \
-               --upload-file /root/rpmbuild/RPMS/x86_64/quarkus-*.rpm \
-               ${{ vars.INSTANCE }}/api/packages/${{ github.repository_owner }}/rpm/upload
+          --upload-file /opt/app-root/src/rpmbuild/RPMS/noarch/quarkus-*.noarch.rpm \
+          ${{ vars.INSTANCE }}/api/packages/${{ github.repository_owner }}/rpm/upload
         env:
           GITEA_USERNAME: ${{ github.repository_owner }}
           GITEA_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
